@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test CORS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Test save wish",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Мария Смирнова",
+        "message": "Поздравляем с этим важным днем! Желаем счастья и любви!"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test get all wishes",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "wishes": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

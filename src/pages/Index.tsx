@@ -55,7 +55,7 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.attendance) {
@@ -67,22 +67,42 @@ const Index = () => {
       return;
     }
 
-    toast({
-      title: "Спасибо за ответ!",
-      description: "Мы получили ваше подтверждение ❤️",
-    });
+    try {
+      const response = await fetch('https://functions.poehali.dev/a28889fc-bb0f-479d-bb0a-8a4cb788060f', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({
-      name: "",
-      attendance: "",
-      guests: "1",
-      alcohol: "",
-      message: "",
-    });
-    setShowRSVP(false);
+      if (!response.ok) {
+        throw new Error('Failed to save RSVP');
+      }
+
+      toast({
+        title: "Спасибо за ответ!",
+        description: "Мы получили ваше подтверждение ❤️",
+      });
+
+      setFormData({
+        name: "",
+        attendance: "",
+        guests: "1",
+        alcohol: "",
+        message: "",
+      });
+      setShowRSVP(false);
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить ответ. Попробуйте позже.",
+        variant: "destructive",
+      });
+    }
   };
 
-  const handleAddWish = (e: React.FormEvent) => {
+  const handleAddWish = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const nameInput = form.elements.namedItem("wishName") as HTMLInputElement;
@@ -97,22 +117,47 @@ const Index = () => {
       return;
     }
 
-    const newGuest: Guest = {
-      id: Date.now(),
-      name: nameInput.value,
-      message: messageInput.value,
-      timestamp: new Date().toISOString().split('T')[0],
-    };
+    try {
+      const response = await fetch('https://functions.poehali.dev/e2c9db26-f730-42c4-b413-1d4edbc6a504', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameInput.value,
+          message: messageInput.value,
+        }),
+      });
 
-    setGuests([newGuest, ...guests]);
-    
-    toast({
-      title: "Спасибо за поздравление!",
-      description: "Ваши теплые слова очень важны для нас ❤️",
-    });
+      if (!response.ok) {
+        throw new Error('Failed to save wish');
+      }
 
-    nameInput.value = "";
-    messageInput.value = "";
+      const data = await response.json();
+
+      const newGuest: Guest = {
+        id: data.id,
+        name: nameInput.value,
+        message: messageInput.value,
+        timestamp: new Date().toISOString().split('T')[0],
+      };
+
+      setGuests([newGuest, ...guests]);
+      
+      toast({
+        title: "Спасибо за поздравление!",
+        description: "Ваши теплые слова очень важны для нас ❤️",
+      });
+
+      nameInput.value = "";
+      messageInput.value = "";
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить поздравление. Попробуйте позже.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
