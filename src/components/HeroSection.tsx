@@ -11,7 +11,7 @@ const HeroSection = () => {
         <h1 className="font-serif text-6xl md:text-8xl mb-8 text-primary-foreground font-light">
           Юрий & Елена
         </h1>
-        <p className="text-3xl md:text-4xl font-light text-primary-foreground mb-8">
+        <p className="md:text-4xl font-light text-primary-foreground mb-8 text-base">
           10:40
         </p>
         <div className="flex items-center justify-center gap-8 mb-8">
