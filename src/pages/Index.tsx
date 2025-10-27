@@ -26,16 +26,12 @@ const Index = () => {
   const { toast } = useToast();
   const [showRSVP, setShowRSVP] = useState(false);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [guests, setGuests] = useState<Guest[]>([
-    { id: 1, name: "Мария и Александр", message: "Поздравляем с предстоящим торжеством! Желаем вам бесконечного счастья!", timestamp: "2025-10-20" },
-    { id: 2, name: "Ольга", message: "Любите друг друга и берегите вашу любовь! Совет да любовь! ❤️", timestamp: "2025-10-21" },
-  ]);
+  const [guests, setGuests] = useState<Guest[]>([]);
 
   const [formData, setFormData] = useState({
     name: "",
     attendance: "",
     guests: "1",
-    dietary: "",
     alcohol: "",
     message: "",
   });
@@ -79,7 +75,6 @@ const Index = () => {
       name: "",
       attendance: "",
       guests: "1",
-      dietary: "",
       alcohol: "",
       message: "",
     });

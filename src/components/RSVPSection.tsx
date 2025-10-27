@@ -13,7 +13,6 @@ interface RSVPSectionProps {
     name: string;
     attendance: string;
     guests: string;
-    dietary: string;
     alcohol: string;
     message: string;
   };
@@ -85,17 +84,6 @@ const RSVPSection = ({ showRSVP, setShowRSVP, formData, setFormData, handleSubmi
                         min="1"
                         value={formData.guests}
                         onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="mt-2"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="dietary" className="text-lg">Пожелания по меню</Label>
-                      <Input
-                        id="dietary"
-                        value={formData.dietary}
-                        onChange={(e) => setFormData({ ...formData, dietary: e.target.value })}
-                        placeholder="Вегетарианское меню, аллергии и т.д."
                         className="mt-2"
                       />
                     </div>
