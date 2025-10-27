@@ -126,7 +126,7 @@ const Index = () => {
           <div className="mb-6 animate-float">
             <span className="text-6xl">💕</span>
           </div>
-          <h1 className="font-serif text-7xl md:text-9xl font-bold text-primary-foreground mb-4">
+          <h1 className="font-serif text-7xl md:text-9xl mb-4 text-red-300 font-semibold">
             Юрий & Елена
           </h1>
           <div className="h-px w-32 bg-primary-foreground/30 mx-auto mb-6"></div>
