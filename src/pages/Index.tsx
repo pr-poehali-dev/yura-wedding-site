@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import HeroSection from "@/components/HeroSection";
+import WelcomeSection from "@/components/WelcomeSection";
 import CountdownSection from "@/components/CountdownSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import DressCodeSection from "@/components/DressCodeSection";
@@ -125,6 +126,7 @@ const Index = () => {
       }}></div>
 
       <HeroSection />
+      <WelcomeSection />
       <CountdownSection timeLeft={timeLeft} />
       <ScheduleSection />
       <DressCodeSection />
