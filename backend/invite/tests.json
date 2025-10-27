@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Test CORS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Test create invitation",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "guest_name": "Иван и Мария",
+        "max_guests": 2
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "invite_code": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test validate missing code",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
