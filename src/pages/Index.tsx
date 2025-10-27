@@ -259,6 +259,89 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 bg-white/40 backdrop-blur-sm relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-5xl md:text-6xl mb-4 text-primary-foreground">
+              Дресс-код
+            </h2>
+            <div className="h-px w-24 bg-primary-foreground/30 mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-white/90 backdrop-blur-sm border-2 border-primary/20 shadow-lg animate-scale-in">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">👗</div>
+                  <h3 className="font-serif text-3xl font-semibold text-primary-foreground mb-2">
+                    Для дам
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Нежно-розовые, пудрово-розовые оттенки
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-4">
+                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFC0CB' }}></div>
+                    <div>
+                      <div className="font-mono text-sm text-muted-foreground">#FFC0CB</div>
+                      <div className="text-sm text-muted-foreground">Нежно-розовый</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFAFBB' }}></div>
+                    <div>
+                      <div className="font-mono text-sm text-muted-foreground">#FFAFBB</div>
+                      <div className="text-sm text-muted-foreground">Пудрово-розовый</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFA0BF' }}></div>
+                    <div>
+                      <div className="font-mono text-sm text-muted-foreground">#FFA0BF</div>
+                      <div className="text-sm text-muted-foreground">Розовый закат</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm border-2 border-primary/20 shadow-lg animate-scale-in" style={{ animationDelay: '0.1s' }}>
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">🤵</div>
+                  <h3 className="font-serif text-3xl font-semibold text-primary-foreground mb-2">
+                    Для мужчин
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Классические черно-белые цвета
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-4">
+                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-300" style={{ backgroundColor: '#080808' }}></div>
+                    <div>
+                      <div className="font-mono text-sm text-muted-foreground">#080808</div>
+                      <div className="text-sm text-muted-foreground">Черный</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-300" style={{ backgroundColor: '#F2F3F4' }}></div>
+                    <div>
+                      <div className="font-mono text-sm text-muted-foreground">#F2F3F4</div>
+                      <div className="text-sm text-muted-foreground">Белый</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-5xl md:text-6xl mb-4 text-primary-foreground">
