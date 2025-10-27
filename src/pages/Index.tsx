@@ -278,32 +278,14 @@ const Index = () => {
                   <h3 className="font-serif text-3xl font-semibold text-primary-foreground mb-2">
                     Для дам
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground mb-6">
                     Нежно-розовые, пудрово-розовые оттенки
                   </p>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFC0CB' }}></div>
-                    <div>
-                      <div className="font-mono text-sm text-muted-foreground">#FFC0CB</div>
-                      <div className="text-sm text-muted-foreground">Нежно-розовый</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFAFBB' }}></div>
-                    <div>
-                      <div className="font-mono text-sm text-muted-foreground">#FFAFBB</div>
-                      <div className="text-sm text-muted-foreground">Пудрово-розовый</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-200" style={{ backgroundColor: '#FFA0BF' }}></div>
-                    <div>
-                      <div className="font-mono text-sm text-muted-foreground">#FFA0BF</div>
-                      <div className="text-sm text-muted-foreground">Розовый закат</div>
-                    </div>
-                  </div>
+                <div className="flex justify-center gap-4">
+                  <div className="w-16 h-16 rounded-full shadow-lg border-2 border-white" style={{ backgroundColor: '#FFC0CB' }}></div>
+                  <div className="w-16 h-16 rounded-full shadow-lg border-2 border-white" style={{ backgroundColor: '#FFAFBB' }}></div>
+                  <div className="w-16 h-16 rounded-full shadow-lg border-2 border-white" style={{ backgroundColor: '#FFA0BF' }}></div>
                 </div>
               </CardContent>
             </Card>
@@ -315,25 +297,13 @@ const Index = () => {
                   <h3 className="font-serif text-3xl font-semibold text-primary-foreground mb-2">
                     Для мужчин
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground mb-6">
                     Классические черно-белые цвета
                   </p>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-300" style={{ backgroundColor: '#080808' }}></div>
-                    <div>
-                      <div className="font-mono text-sm text-muted-foreground">#080808</div>
-                      <div className="text-sm text-muted-foreground">Черный</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 rounded-xl shadow-md border-2 border-gray-300" style={{ backgroundColor: '#F2F3F4' }}></div>
-                    <div>
-                      <div className="font-mono text-sm text-muted-foreground">#F2F3F4</div>
-                      <div className="text-sm text-muted-foreground">Белый</div>
-                    </div>
-                  </div>
+                <div className="flex justify-center gap-4">
+                  <div className="w-16 h-16 rounded-full shadow-lg border-2 border-white" style={{ backgroundColor: '#080808' }}></div>
+                  <div className="w-16 h-16 rounded-full shadow-lg border-2 border-white" style={{ backgroundColor: '#F2F3F4' }}></div>
                 </div>
               </CardContent>
             </Card>
