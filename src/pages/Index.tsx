@@ -121,7 +121,7 @@ const Index = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        opacity: 0.15
+        opacity: 0.35
       }}></div>
 
       <HeroSection />
