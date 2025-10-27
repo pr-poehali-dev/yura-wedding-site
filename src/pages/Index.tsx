@@ -119,23 +119,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white relative">
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-0 w-1/3 h-1/3" style={{ 
-          backgroundImage: 'url(https://cdn.poehali.dev/files/48c8597e-7100-451d-9557-07b5ccdf230f.png)',
-          backgroundSize: '100% auto',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'top left',
-          opacity: 0.3
-        }}></div>
-        <div className="absolute bottom-0 right-0 w-1/3 h-1/3" style={{ 
-          backgroundImage: 'url(https://cdn.poehali.dev/files/48c8597e-7100-451d-9557-07b5ccdf230f.png)',
-          backgroundSize: '100% auto',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom right',
-          opacity: 0.3,
-          transform: 'rotate(180deg)'
-        }}></div>
-      </div>
+      <div className="fixed inset-0 pointer-events-none z-0" style={{ 
+        backgroundImage: 'url(https://cdn.poehali.dev/files/48c8597e-7100-451d-9557-07b5ccdf230f.png)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        opacity: 0.15
+      }}></div>
 
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 z-10">
         
