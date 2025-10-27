@@ -118,11 +118,28 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/20 via-secondary/20 to-accent/20">
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0iI0ZGREVFMiIgZmlsbC1vcGFjaXR5PSIwLjMiLz48L3N2Zz4=')] opacity-40"></div>
+    <div className="min-h-screen bg-white relative">
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-0 w-1/3 h-1/3" style={{ 
+          backgroundImage: 'url(https://cdn.poehali.dev/files/48c8597e-7100-451d-9557-07b5ccdf230f.png)',
+          backgroundSize: '100% auto',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top left',
+          opacity: 0.3
+        }}></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3" style={{ 
+          backgroundImage: 'url(https://cdn.poehali.dev/files/48c8597e-7100-451d-9557-07b5ccdf230f.png)',
+          backgroundSize: '100% auto',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom right',
+          opacity: 0.3,
+          transform: 'rotate(180deg)'
+        }}></div>
+      </div>
+
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 z-10">
         
-        <div className="text-center z-10 animate-fade-in">
+        <div className="text-center relative z-10 animate-fade-in">
           <div className="mb-6 animate-float">
             <span className="text-6xl">💕</span>
           </div>
@@ -148,7 +165,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-serif text-5xl md:text-6xl text-center mb-4 text-primary-foreground">
             До торжества осталось
@@ -175,7 +192,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white/40 backdrop-blur-sm">
+      <section className="py-20 px-4 bg-white/40 backdrop-blur-sm relative z-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-5xl md:text-6xl mb-4 text-primary-foreground">
@@ -285,7 +302,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-5xl md:text-6xl mb-4 text-primary-foreground">
@@ -357,7 +374,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 px-4 bg-primary/10 backdrop-blur-sm">
+      <footer className="py-12 px-4 bg-primary/10 backdrop-blur-sm relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-4 animate-float">
             <span className="text-4xl">💐</span>
