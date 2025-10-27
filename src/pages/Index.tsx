@@ -36,6 +36,7 @@ const Index = () => {
     attendance: "",
     guests: "1",
     dietary: "",
+    alcohol: "",
     message: "",
   });
 
@@ -79,6 +80,7 @@ const Index = () => {
       attendance: "",
       guests: "1",
       dietary: "",
+      alcohol: "",
       message: "",
     });
     setShowRSVP(false);
@@ -386,6 +388,42 @@ const Index = () => {
                           placeholder="Вегетарианское меню, аллергии и т.д."
                           className="mt-2"
                         />
+                      </div>
+
+                      <div>
+                        <Label className="text-lg mb-3 block">Какой алкоголь вы предпочитаете?</Label>
+                        <RadioGroup value={formData.alcohol} onValueChange={(value) => setFormData({ ...formData, alcohol: value })}>
+                          <div className="grid gap-2">
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="red-wine" id="red-wine" />
+                              <Label htmlFor="red-wine" className="cursor-pointer">Красное вино</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="white-wine" id="white-wine" />
+                              <Label htmlFor="white-wine" className="cursor-pointer">Белое вино</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="champagne" id="champagne" />
+                              <Label htmlFor="champagne" className="cursor-pointer">Шампанское</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="whiskey-cognac" id="whiskey-cognac" />
+                              <Label htmlFor="whiskey-cognac" className="cursor-pointer">Виски/коньяк</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="vodka" id="vodka" />
+                              <Label htmlFor="vodka" className="cursor-pointer">Водка</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="beer" id="beer" />
+                              <Label htmlFor="beer" className="cursor-pointer">Пиво</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="no-alcohol" id="no-alcohol" />
+                              <Label htmlFor="no-alcohol" className="cursor-pointer">Не буду пить алкоголь</Label>
+                            </div>
+                          </div>
+                        </RadioGroup>
                       </div>
                     </>
                   )}
